@@ -1,0 +1,29 @@
+.container3 button{
+    width:15rem;
+    height: 3rem;
+}
+.main1{
+    height: 150rem;
+    margin-left: 15rem;
+    margin-top: 5rem;
+    background: rgb(117, 112, 112);
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: 470px;
+    grid-auto-flow: dense;
+    margin-right: 15rem;
+    margin-bottom: 5rem;
+
+}
+.shoe-box3 {
+    margin-left: 5rem;
+    margin-top: 3rem;
+    margin-right: 5rem;
+}
+
+.women-box {
+
+    color: gold;
+    text-align: center;
+}

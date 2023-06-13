@@ -33,47 +33,95 @@ button {
 .aboutUs {
     color: rgb(240, 102, 52);
     letter-spacing: 2px;
-    margin-left: 5rem;
+    margin-left: 3rem;
 }
-.about{
+
+.about {
     display: flex;
-    margin-left: 15rem;
-    margin-right: 15rem;
-    justify-content:space-between;
+    margin-left: 5rem;
+    margin-right: 10rem;
+    justify-content: space-between;
     letter-spacing: 2px;
     font-size: 1.50rem;
     margin-top: 5rem;
-    
+
 }
-.about-us p{
-    margin-left: 5rem;
+
+.about-us p {
+    margin-left: 3rem;
     margin-top: 2rem;
     color: rgb(96, 86, 86);
 }
-.about-head{
-    margin-left: 5rem;
+
+.about-head {
+    margin-left: 3rem;
     margin-top: 3rem;
 }
-.read-more{
-    margin-left: 5rem;
+
+.read-more {
+    margin-left: 3rem;
     letter-spacing: 3px;
     font-size: 18px;
-    
+
 }
-.line{
+
+.line {
     width: 125px;
     height: 3px;
     background: orange;
-    margin-left: 5rem;
+    margin-left: 3rem;
 }
-.see-how{
+
+.see-how {
     display: flex;
     height: 50rem;
     margin-top: 5rem;
-    background-image: url('/src/assets/lines-bg.webp');
+    /* background-image: url('/src/assets/lines-bg.webp'); */
     background-size: cover;
     background-position: center;
     background: darkgray;
+
+}
+
+.shoe {
+    display: flex;
+    width: 400px;
+    height: auto;
+    flex-wrap: wrap;
+    display: inline;
+}
+
+.container {
+    margin-left: 6rem;
+    margin-top: 3rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    grid-auto-rows: 500px;
+    grid-auto-flow: dense;
+}
+
+.shoe-box {
+
+    text-align: center;
+}
+
+.our-best-seller {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    letter-spacing: 3px;
+    margin-right: 8rem;
+    margin-left: 6rem;
+}
+
+ .line2 {
+    
+    width: 250px;
+    height: 3px;
+    background: orange;
+   
 
 }
 

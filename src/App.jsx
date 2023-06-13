@@ -7,6 +7,10 @@ import NavBar from './Components/NavBar';
 import Body from './Components/Body';
 import MocCollection from "./Components/MocCollection.jsx"
 import { footContext } from "./Context";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Men from './Components/Men';
+import Women from './Components/Women';
+import Collection from './Components/Collection';
 
 function App() {
   // const [currentForm, setCurrentForm] = useState('login');
@@ -20,18 +24,25 @@ function App() {
 
   return (
     <>
-      <footContext.Provider value={menCollection}>
+      <BrowserRouter>
+        <footContext.Provider value={menCollection}>
+            <div className='app'>
+              <NavBar />
+          <Routes>
+              {/* {
+              currentForm === 'login' ? <Login onFormSwitch={toggleForm} /> : <Registration onFormSwitch={toggleForm} />
+            }
+          */}
+             
+              <Route path='/' Component={Body}/>
+              <Route path='/men' Component={Men}/>
+              <Route path='/women' Component={Women}/>
+              <Route path='/collection' Component={Collection}/>
 
-        <div className='app'>
-          <NavBar />
-          {/* {
-          currentForm === 'login' ? <Login onFormSwitch={toggleForm} /> : <Registration onFormSwitch={toggleForm} />
-        }
-      */}
-
-          <Body />
-        </div>
-      </footContext.Provider>
+          </Routes>
+            </div>
+        </footContext.Provider>
+      </BrowserRouter>
     </>
   )
 }

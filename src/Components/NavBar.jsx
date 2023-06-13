@@ -2,11 +2,7 @@
 import './NavBar.css';
 import { GiShoppingBag } from 'react-icons/gi';
 import { FaUserAlt } from 'react-icons/fa';
-// import logo from '../assets/Foot_Island.png'
-
-
-
-
+import { Link } from 'react-router-dom';
 
 
 export default function NavBar() {
@@ -15,12 +11,11 @@ export default function NavBar() {
         <div>
             <nav className="navbar">
                 <h2 className='brand-name'>Foot  Island</h2>
-                {/* <img className='logo' src={logo} alt='Logo'/> */}
-                <a href="" className="nav-link">MEN</a>
-                <a href="" className="nav-link">WOMEN</a>
-                <a href="" className="nav-link">COLLECTION</a>
-                <a href="" className="nav-link">LOOKBOOK</a> 
-                <a href="" className='nav-link'>SALE</a>
+                <Link to='/men' className="nav-link">MEN</Link>
+                <Link to='/women' className="nav-link">WOMEN</Link>
+                <Link to='/collection' className="nav-link">COLLECTION</Link>
+                <Link to='/lookbook' className="nav-link">LOOKBOOK</Link>
+                <Link to='/sale' className="nav-link">SALE</Link>
 
                 <div className='icon'>
                     <a href="" className='nav-link'>OUR STORY</a>
@@ -29,7 +24,7 @@ export default function NavBar() {
                     <a href="" className='nav-link'><FaUserAlt /></a>
                 </div>
             </nav>
-          
+
         </div>
     );
 }
