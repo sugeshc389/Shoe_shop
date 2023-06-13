@@ -10,7 +10,7 @@ export default function NavBar() {
     return (
         <div>
             <nav className="navbar">
-                <h2 className='brand-name'>Foot  Island</h2>
+               <Link style={{textDecoration:'none'}} to='/'><h2 className='brand-name' >Foot  Island</h2></Link> 
                 <Link to='/men' className="nav-link">MEN</Link>
                 <Link to='/women' className="nav-link">WOMEN</Link>
                 <Link to='/collection' className="nav-link">COLLECTION</Link>

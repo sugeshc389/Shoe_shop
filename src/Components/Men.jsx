@@ -17,8 +17,8 @@ export default function Men() {
             <div className="men">
                 <div className="men-box">
 
-                <h1>Men</h1>
-                <button><IoIosMenu />FILTER SHOES</button>
+                    <h1>Men</h1>
+                    <button><IoIosMenu />FILTER SHOES</button>
                 </div>
                 <div className="container2">
 
@@ -29,8 +29,11 @@ export default function Men() {
                             return (
                                 <div key={index} className="shoe-box2">
                                     <img src={item.Image} />
+                                    <div className="men-btn">
+                                    <button>QUICK VIEW</button>
                                     <h3>{item.Title}</h3>
-                                    <h4>{item.Price}</h4>
+                                    <h4 style={{color:"darkgrey"}}>${item.Price}</h4>
+                                    </div>
                                 </div>
                             )
                         })}
