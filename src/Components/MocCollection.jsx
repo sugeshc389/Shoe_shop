@@ -109,7 +109,7 @@ let Men_Collections = [
         Category:"Training",
         Gender:"Female",
         Price:1499.01,
-        id:13,
+        id:14,
         Image:"https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-001-400x400.jpg"
     },
     {
@@ -117,7 +117,7 @@ let Men_Collections = [
         Category:"Training",
         Gender:"Female",
         Price:1549.01,
-        id:14,
+        id:15,
         Image:"https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-002-400x400.jpg"
     }
 ]

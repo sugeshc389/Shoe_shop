@@ -14,6 +14,7 @@ export default function Body() {
         <div className='main-div'>
             <body className='body' >
                 <div className='main-img' >
+
                     <div className='main-content'>
                         <h1>Love the Planet <br /> we walk on</h1>
                         <p>Bibendum fermentum, aenean donec pretium aliquam blandit <br /> tempor imperdiet arcu arcu ut nunc in dictum mauris at ut.</p>
@@ -65,7 +66,7 @@ export default function Body() {
                             <div className='shoe ' key={index}>
                                 <img src={item.Image} />
                                 <div className='shoe-box'>
-                                <button>QUICK VIEW</button>
+                                 <Link to={`/viewProduct/${item.id}`}> <button>QUICK VIEW</button></Link>  
                                     <h2>{item.Title}</h2>
                                     <h4>${item.Price}</h4>
                                     <h3><CiStar />

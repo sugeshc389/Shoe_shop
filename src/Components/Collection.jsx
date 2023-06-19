@@ -2,6 +2,7 @@ import { IoIosMenu } from 'react-icons/io';
 import './Collection.css'
 import { useContext } from 'react';
 import { footContext } from '../Context';
+import { Link } from 'react-router-dom';
 
 export default function Collection() {
     const data = useContext(footContext)
@@ -21,7 +22,7 @@ export default function Collection() {
                                     <div key={index} className='shoe-box4'>
                                         <img src={item.Image} />
                                         <div className='coll-btn'>
-                                            <button>QUICK VIEW</button>
+                                          <Link to={`/viewProduct/${item.id}`}><button>QUICK VIEW</button></Link>  
                                             <h3>{item.Title}</h3>
                                             <h4 style={{ color: 'darkgray' }}>${item.Price}</h4>
                                         </div>

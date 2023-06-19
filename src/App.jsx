@@ -11,6 +11,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Men from './Components/Men';
 import Women from './Components/Women';
 import Collection from './Components/Collection';
+import ViewProduct from './Components/ViewProduct';
+import AddToCart from './Components/AddToCart';
+
 
 function App() {
   // const [currentForm, setCurrentForm] = useState('login');
@@ -27,6 +30,7 @@ function App() {
       <BrowserRouter>
         <footContext.Provider value={menCollection}>
             <div className='app'>
+             
               <NavBar />
           <Routes>
               {/* {
@@ -35,9 +39,11 @@ function App() {
           */}
              
               <Route path='/' Component={Body}/>
-              <Route path='/men' Component={Men}/>
+              <Route path='/men/' Component={Men}/>
               <Route path='/women' Component={Women}/>
               <Route path='/collection' Component={Collection}/>
+              <Route path='/viewProduct/:id'Component={ViewProduct}/>
+              <Route path='/addToCart/:id' Component={AddToCart}/>
 
           </Routes>
             </div>
