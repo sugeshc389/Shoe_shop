@@ -1,31 +1,70 @@
-// import './Login.css';
-import PropTypes from 'prop-types';
+import { useRef, useContext } from "react";
+import "./Registraion.css";
+import { useNavigate, Link } from 'react-router-dom';
+import './Login.css'
+import { footContext } from "../../Context";
 
-import { useState } from "react"
+const Login = () => {
+  const data = useContext(footContext)
+  const nav = useNavigate()
+  const inputRef = useRef()
+  const { password } = data
 
-export const Login = (props) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
-        console.log(password);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const email = inputRef.current.email.value
+    const Password = inputRef.current.password.value
+    console.log(email, Password);
+    const [newdata] = password
+    newdata.Email == email && newdata.Password == Password ? nav('/') : alert('User Not Found !!!');
 
-    return (
-        <div className="auth-form-container">
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='youremail@gmail.com' id='email' name='email' /><br />
-                <input value={password} type='password' onChange={(e) => setPassword(e.target.value)} placeholder='Password' id='password' name='password' /><br />
-                <button type="submit">Log In</button>
-            </form>
-            <a onClick={() => props.onFormSwitch('register')}>Don t have an account? Register Here.</a>
+
+  };
+
+  return (
+    <div className="auth-form">
+      <h2>Login</h2>
+      <form ref={inputRef}>
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input
+            className='inpt'
+            name='email'
+            type='email'
+            id='email'
+            required
+          />
         </div>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input
+            className='inpt'
+            name='password'
+            type='password'
+            id='password'
+            required
+          />
+        </div>
+        <button type="submit" onClick={handleSubmit} >Login</button>
 
-    )
-} 
-Login.propTypes = {
-    onFormSwitch: PropTypes.func.isRequired,
+        <div className="toggle-link">
+          <span>
+            Dont have an account?
+
+          </span>
+
+        </div>
+      </form>
+      <Link to='/register' ><button
+        className="reg-btn"
+        type="submit"
+
+      >
+        Register
+      </button></Link>
+    </div>
+  );
 };
+
+export default Login;

@@ -20,8 +20,8 @@ export default function NavBar() {
                 <div className='icon'>
                     <a href="" className='nav-link'>OUR STORY</a>
                     <a href="" className='nav-link'>CONTACT</a>
-                    <a href="" className='nav-link'><GiShoppingBag /></a>
-                    <a href="" className='nav-link'><FaUserAlt /></a>
+                  <Link to='/cart' className='nav-link'><GiShoppingBag /></Link>
+                  <Link to='/register' className='nav-link'><FaUserAlt/></Link> 
                 </div>
             </nav>
 

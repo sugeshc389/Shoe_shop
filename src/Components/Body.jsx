@@ -66,7 +66,7 @@ export default function Body() {
                             <div className='shoe ' key={index}>
                                 <img src={item.Image} />
                                 <div className='shoe-box'>
-                                 <Link to={`/viewProduct/${item.id}`}> <button>QUICK VIEW</button></Link>  
+                                    <Link to={`/viewProduct/${item.id}`}> <button>QUICK VIEW</button></Link>
                                     <h2>{item.Title}</h2>
                                     <h4>${item.Price}</h4>
                                     <h3><CiStar />

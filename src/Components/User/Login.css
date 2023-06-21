@@ -1,0 +1,71 @@
+.auth-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #f1ed71;
+    border-radius: 30px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  .inpt[type="email"],
+  .inpt[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .reg-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #57d25d;
+    color: #000000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .reg-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .toggle-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .toggle-link span {
+    font-size: 14px;
+    color: black;
+  }
+  
+  .toggle-link .reg-btn {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 5px;
+    border-color: #000000;
+    border-style: solid;
+  }
+  
+  .toggle-link .reg-btn:hover {
+    color: #c92828;
+  }
