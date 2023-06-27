@@ -15,22 +15,26 @@ import Registration from './Components/User/Registration';
 import Login from './Components/User/Login';
 import Footer from './Components/Footer';
 import AdminPage from './Components/Admin/AdminPage';
+import Products from './Components/Admin/Products';
+import AddProducts from './Components/Admin/AddProducts';
+
 
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [men, setMen] = useState(MocCollection);
   const [password, setPassword] = useState([]);
-  const user = { password, setPassword, men, setMen,setCartItems,cartItems }
+  const [addProduct, setAddProduct] = useState([]);
+  const user = { password, setPassword, men, setMen, setCartItems, cartItems, addProduct, setAddProduct }
 
 
   return (
     <>
-          <div className='app'>
-      <BrowserRouter>
-        <footContext.Provider value={user}>
+      <div className='app'>
+        <BrowserRouter>
+          <footContext.Provider value={user}>
 
-            <NavBar  />
+            <NavBar />
             <Routes>
 
               <Route path='/' Component={Body} />
@@ -42,13 +46,15 @@ function App() {
               <Route path='/cart' Component={AddToCart} />
               <Route path='/register' Component={Registration} />
               <Route path='/login' Component={Login} />
-              <Route path='/admin' Component={AdminPage}/>
+              <Route path='/admin' Component={AdminPage} />
+              <Route path='/products' Component={Products} />
+              <Route path='/addproducts' Component={AddProducts}/>
 
             </Routes>
-            <Footer/>
-        </footContext.Provider>
-      </BrowserRouter>
-          </div>
+            <Footer />
+          </footContext.Provider>
+        </BrowserRouter>
+      </div>
     </>
   )
 }

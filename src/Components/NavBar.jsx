@@ -13,10 +13,7 @@ export default function NavBar() {
     const user = useContext(footContext);
     const {cartItems}= user
 
-    // const { password } = user;
-    // const [newData] = password;
-    // console.log('user:', newData);
-
+  
 
     return (
         <div>
