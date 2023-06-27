@@ -1,9 +1,11 @@
 .main-div {
     margin: 20px;
+    
   }
   
   .main-img {
     height: 600px;
+    background: url('../assets/recycled-shoe-store-hero-image-bg.jpg')center/cover no-repeat;
    
    
 
@@ -143,5 +145,25 @@
       text-align: center;
       margin: 3rem 0;
     }
+}
+.seehow-head{
+  margin-left: 20rem;
+  margin-top: 3rem;
+  color: black;
+
+}
+.see-how p{
+margin-left: 20rem;
+}
+.see-how{
+  display: flex;
+  flex-direction: column;
+}
+.seehow-img{
+  margin-left: 20rem;
+  margin-top: 3rem;
+}
+.seehowleft{
+  align-items: center;
 }
 

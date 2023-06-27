@@ -37,4 +37,9 @@
       margin-top: 10px;
     }
   }
+  .bg{
+    color: red;
+    background-color: yellow;
+    border-radius: 5rem;
+  }
   

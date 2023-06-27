@@ -14,9 +14,11 @@ export default function Registration() {
   }, [password])
   const handleSubmit = (e) => {
     e.preventDefault();
+    const Cart = []
     const Email = inputref.current.email.value
     const Password = inputref.current.password.value
-    setPassword([{ Password, Email }]);
+    const Name = inputref.current.name.value
+    setPassword([{ Password, Email,Name,Cart }]);
 
     nav('/login')
   };
@@ -25,6 +27,16 @@ export default function Registration() {
     <div className="auth-form">
       <h2>Register</h2>
       <form ref={inputref} onSubmit={handleSubmit}>
+      <div className="form-group">
+          <label htmlFor="password">Name:</label>
+          <input
+            className="inpt"
+            name="name"
+            type="text"
+            id="name"
+            required
+          />
+        </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input

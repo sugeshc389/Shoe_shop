@@ -25,7 +25,8 @@
 }
 
 .inpt[type="email"],
-.inpt[type="password"] {
+.inpt[type="password"],
+.inpt[type="text"] {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;

@@ -13,22 +13,24 @@ import ViewProduct from './Components/ViewProduct';
 import AddToCart from './Components/AddToCart';
 import Registration from './Components/User/Registration';
 import Login from './Components/User/Login';
+import Footer from './Components/Footer';
+import AdminPage from './Components/Admin/AdminPage';
 
 
 function App() {
-
+  const [cartItems, setCartItems] = useState([]);
   const [men, setMen] = useState(MocCollection);
   const [password, setPassword] = useState([]);
-  const user = { password, setPassword, men, setMen }
+  const user = { password, setPassword, men, setMen,setCartItems,cartItems }
 
 
   return (
     <>
+          <div className='app'>
       <BrowserRouter>
         <footContext.Provider value={user}>
-          <div className='app'>
 
-            <NavBar />
+            <NavBar  />
             <Routes>
 
               <Route path='/' Component={Body} />
@@ -40,11 +42,13 @@ function App() {
               <Route path='/cart' Component={AddToCart} />
               <Route path='/register' Component={Registration} />
               <Route path='/login' Component={Login} />
+              <Route path='/admin' Component={AdminPage}/>
 
             </Routes>
-          </div>
+            <Footer/>
         </footContext.Provider>
       </BrowserRouter>
+          </div>
     </>
   )
 }

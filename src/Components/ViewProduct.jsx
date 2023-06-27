@@ -1,4 +1,4 @@
-import { useContext,useState } from "react";
+import { useContext } from "react";
 import { footContext } from "../Context";
 import {  useParams } from "react-router-dom";
 import './ViewProduct.css';
@@ -7,11 +7,12 @@ import './ViewProduct.css';
 export default function ViewProduct() {
   const { id } = useParams();
   const data = useContext(footContext);
-  const { men } = data;
+  const { men ,cartItems,setCartItems} = data;
   const filteredShoe = men.filter((item) => item.id === parseInt(id));
   const item = filteredShoe[0];
-  const [cartItems, setCartItems] = useState([]);
+ 
   const updatedCartItems = [...cartItems];
+  // const nav = useNavigate()
 
   const addToCart = (item) => {
     
@@ -22,11 +23,12 @@ export default function ViewProduct() {
       updatedCartItems.push({ ...item, quantity: 1 });
     }
     setCartItems(updatedCartItems);
-    console.log(updatedCartItems);
+    console.warn('Updated:',cartItems);
+    // nav('/cart')
   };
 
   return (
-   
+    
     <div className="container3">
      
       <div className="row d-flex justify-content-center">
