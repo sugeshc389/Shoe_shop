@@ -1,5 +1,4 @@
 import { useContext, useEffect, useRef } from 'react'
-// import './Addproducts.css'
 import { useNavigate } from 'react-router-dom'
 import { footContext } from '../../Context'
 

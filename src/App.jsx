@@ -1,11 +1,11 @@
 import './Components/User/Registration';
 import './App.css'
 import { useState } from 'react';
-import NavBar from './Components/NavBar';
-import Body from './Components/Body';
-import MocCollection from "./Components/MocCollection.jsx"
 import { footContext } from "./Context";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MocCollection from "./Components/MocCollection.jsx"
+import NavBar from './Components/NavBar';
+import Body from './Components/Body';
 import Men from './Components/Men';
 import Women from './Components/Women';
 import Collection from './Components/Collection';
@@ -17,6 +17,8 @@ import Footer from './Components/Footer';
 import AdminPage from './Components/Admin/AdminPage';
 import Products from './Components/Admin/Products';
 import AddProducts from './Components/Admin/AddProducts';
+import Users from './Components/Admin/Users';
+import AdminLogin from './Components/Admin/AdminLogin';
 
 
 
@@ -48,7 +50,9 @@ function App() {
               <Route path='/login' Component={Login} />
               <Route path='/admin' Component={AdminPage} />
               <Route path='/products' Component={Products} />
-              <Route path='/addproducts' Component={AddProducts}/>
+              <Route path='/addproducts' Component={AddProducts} />
+              <Route path='/users' Component={Users}/>
+              <Route path='/adminlogin' Component={AdminLogin}/>
 
             </Routes>
             <Footer />

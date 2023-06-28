@@ -27,13 +27,14 @@ export default function NavBar() {
                     <Link to='/collection' className="nav-link">COLLECTION</Link>
                     <Link to='/lookbook' className="nav-link">LOOKBOOK</Link>
                     <Link to='/sale' className="nav-link">SALE</Link>
-
+                    
                     <div className='icon'>
 
                         <a href="" className='nav-link'></a>
                         <a href="" className='nav-link'>CONTACT</a>
                         <Link to='/cart' className='nav-link'><GiShoppingBag /><Badge className="bg" >{cartItems.length}</Badge></Link>
                         <Link to='/register' className='nav-link'><FaUserAlt /></Link>
+                        <Link to='/adminLogin' className='nav-link'>Admin Login</Link>
                     </div>
                 </nav>
                 

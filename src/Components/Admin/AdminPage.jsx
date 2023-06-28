@@ -14,7 +14,7 @@ export default function AdminPage() {
 
             <nav className="navbar">
                 <h2 className="admin-panel">Admin Panel</h2>
-                <button>Users</button>
+                <button onClick={()=>nav('/users')}>Users</button>
                 <button onClick={()=>nav('/products')}>Products</button>
             </nav>
 

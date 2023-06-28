@@ -18,7 +18,7 @@ export default function Registration() {
     const Email = inputref.current.email.value
     const Password = inputref.current.password.value
     const Name = inputref.current.name.value
-    setPassword([{ Password, Email,Name,Cart }]);
+    setPassword([...password,{ Password, Email,Name,Cart }]);
 
     nav('/login')
   };
