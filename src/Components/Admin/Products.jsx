@@ -5,19 +5,16 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Products() {
   const data = useContext(footContext);
-  const { addProduct, men } = data;
+  const { addProduct, men,setMen } = data;
   const allProducts = [...men, ...addProduct];
   const nav = useNavigate();
-  
 
-  // State to keep track of the item being edited
-  //   const [editItem, setEditItem] = useState(null);
+  const deleteItem = (itemId)=>{
+   const removeProduct = men.filter((item)=> item.id !== itemId);
+   setMen(removeProduct)
+  }
 
-  // Function to handle editing an item
-  //   const handleEdit = (item) => {
-  //     setEditItem(item);
-  //     nav(`/editProduct/${item.id}`); // Navigate to the edit product page
-  //   };
+
 
   return (
     <>
@@ -52,7 +49,7 @@ export default function Products() {
                 <td>
 
                   <button onClick={() => nav(`/editProduct/${item.id}`)}>Edit</button>
-                  <button>Delete</button>
+                  <button onClick={()=> deleteItem(item.id)}>Delete</button>
                 </td>
               </tr>
             ))}

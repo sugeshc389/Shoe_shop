@@ -17,10 +17,10 @@ export default function AddProducts() {
         const Category = inputref.current.Category.value
         const Gender = inputref.current.Gender.value
         const Price = inputref.current.Price.value
-        const id = inputref.current.id.value
+        
+        const id = Date.now()
         const Image = inputref.current.Image.value
         setMen([...men, { Title, Category, Gender, Price, id, Image }])
-
 
 
         nav('/products')
@@ -71,16 +71,7 @@ export default function AddProducts() {
                             required
                         />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Id:</label>
-                        <input
-                            className="inpt"
-                            name="id"
-                            type="number"
-                            id="id"
-                            required
-                        />
-                    </div>
+                    
                     <div className="form-group">
                         <label htmlFor="password">Image</label>
                         <input

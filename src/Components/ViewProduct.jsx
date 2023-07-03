@@ -71,7 +71,7 @@ export default function ViewProduct() {
                   <div className="cart mt-4 align-items-center">
                     
                     {/* <Link to={`/cart/${item.id}`}> */}
-                      <button onClick={() => addToCart(item)} className="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button>
+                      <button onClick={() => addToCart(item)} >Add to cart</button>
                       
                       
                     {/* </Link> */}

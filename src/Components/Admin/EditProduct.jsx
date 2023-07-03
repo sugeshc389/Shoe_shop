@@ -8,30 +8,30 @@ export default function EditProduct() {
 
   const nav = useNavigate();
   const { id } = useParams();
-  
+
 
   const filteredProduct = men.filter((item) => item.id === parseInt(id));
-  
+
 
   const [editProduct, setEditProduct] = useState(filteredProduct[0]);
 
-  console.warn(editProduct);
+  console.warn(filteredProduct[0]);
 
- 
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setEditProduct((prev) => {
       return { ...prev, [name]: value };
     });
-   
+
   };
 
   const handleEdit = (e) => {
     e.preventDefault();
     const index = men.findIndex((item) => item.id === parseInt(id));
     men[index] = editProduct;
-    
+
     nav('/products');
   };
 
