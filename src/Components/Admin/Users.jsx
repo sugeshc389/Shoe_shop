@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { footContext } from "../../Context"
+import './Users.css'
 
 export default function Users() {
     const data = useContext(footContext)
@@ -7,7 +8,7 @@ export default function Users() {
     console.log(password);
     return (
         <>
-            <h1>Users</h1>
+            <h1 className="users">Users</h1>
 
             <table >
                 <thead>

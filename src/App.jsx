@@ -19,6 +19,8 @@ import Products from './Components/Admin/Products';
 import AddProducts from './Components/Admin/AddProducts';
 import Users from './Components/Admin/Users';
 import AdminLogin from './Components/Admin/AdminLogin';
+import Lookbook from './Components/Lookbook';
+import EditProduct from './Components/Admin/EditProduct';
 
 
 
@@ -27,7 +29,13 @@ function App() {
   const [men, setMen] = useState(MocCollection);
   const [password, setPassword] = useState([]);
   const [addProduct, setAddProduct] = useState([]);
-  const user = { password, setPassword, men, setMen, setCartItems, cartItems, addProduct, setAddProduct }
+  const [products, setProducts] = useState([]);
+  const getProductById = (id) => {
+    // Logic to retrieve the product by ID from the products array
+    const product = products.find((product) => product.id === id);
+    return product;
+  };
+  const user = { password, setPassword, men, setMen, setCartItems, cartItems, addProduct, setAddProduct ,getProductById,setProducts}
 
 
   return (
@@ -53,6 +61,8 @@ function App() {
               <Route path='/addproducts' Component={AddProducts} />
               <Route path='/users' Component={Users}/>
               <Route path='/adminlogin' Component={AdminLogin}/>
+              <Route path='/lookbook' Component={Lookbook}/>
+              <Route path='/editProduct/:id' Component={EditProduct}/>
 
             </Routes>
             <Footer />

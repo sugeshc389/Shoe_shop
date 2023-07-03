@@ -4,8 +4,8 @@
   }
   
   .main {
-    margin-left: 2rem;
-    margin-right: 1rem;
+    margin-left: 8rem;
+    margin-right: 3rem;
     margin-top: 3rem;
     display: grid;
     grid-auto-flow: row;
@@ -28,6 +28,7 @@
   .men-btn {
     text-align: center;
     margin-bottom: 2rem;
+    margin-right: 8rem;
   }
   
   @media (max-width: 768px) {

@@ -4,7 +4,7 @@
   }
   
   .main2 {
-    margin-left: 2rem;
+    margin-left: 8rem;
     margin-right: 2rem;
     margin-top: 3rem;
     display: grid;
@@ -28,6 +28,7 @@
   .coll-btn {
     text-align: center;
     margin-bottom: 2rem;
+    margin-right: 8rem;
   }
   
   @media (max-width: 768px) {

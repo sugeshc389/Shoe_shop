@@ -42,7 +42,7 @@ export default function ViewProduct() {
                   </div>
                   <div className="thumbnail text-center">
                     <img src={item.Image} width="70" alt={item.Title} />
-                    <img src={item.Image} width="70" alt={item.Title} />
+                    {/* <img src={item.Image} width="70" alt={item.Title} /> */}
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function ViewProduct() {
                     <div className="price d-flex flex-row align-items-center">
                       <span className="act-price">${item.Price}</span>
                       <div className="ml-2">
-                        <small className="dis-price">${item.Price}</small>
+                        {/* <small className="dis-price">${item.Price}</small> */}
                         
                       </div>
                     </div>

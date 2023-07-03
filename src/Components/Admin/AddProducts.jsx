@@ -2,16 +2,16 @@ import { useContext, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { footContext } from '../../Context'
 
-export default function AddProducts(){
+export default function AddProducts() {
 
     const inputref = useRef(null)
     const data = useContext(footContext)
-    const {addProduct,setAddProduct} = data;
-    const nav =useNavigate()
-    useEffect(()=>{
-console.log(addProduct);
-    },[addProduct])
-    const handleSubmit = (e)=>{
+    const { setMen,men } = data;
+    const nav = useNavigate()
+    useEffect(() => {
+        console.log(men);
+    }, [men])
+    const handleSubmit = (e) => {
         e.preventDefault();
         const Title = inputref.current.Title.value
         const Category = inputref.current.Category.value
@@ -19,16 +19,16 @@ console.log(addProduct);
         const Price = inputref.current.Price.value
         const id = inputref.current.id.value
         const Image = inputref.current.Image.value
-        setAddProduct([{Title,Category,Gender,Price,id,Image}])
-        
+        setMen([...men, { Title, Category, Gender, Price, id, Image }])
+
 
 
         nav('/products')
 
     }
-    return(
+    return (
         <>
-        <div className="auth-form">
+            <div className="auth-form">
                 <h2>Add Product</h2>
                 <form ref={inputref} onSubmit={handleSubmit} >
                     <div className="form-group">

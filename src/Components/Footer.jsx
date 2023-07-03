@@ -1,10 +1,7 @@
 // import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
-import { BsFacebook } from 'react-icons/bs';
-import {AiFillTwitterCircle} from 'react-icons/ai'
-import {AiFillInstagram} from 'react-icons/ai'
-import {AiFillLinkedin} from 'react-icons/ai'
+import socialIcons from '../assets/socialIcons.png'
 
 const Footer = () => {
   return (
@@ -12,23 +9,12 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section about">
-          <Link style={{ textDecoration: 'none' }} to='/'><h2 className='brand-name' >Foot  Island</h2></Link>
+            <Link style={{ textDecoration: 'none' }} to='/'><h2 className='brand-name' >Footland</h2></Link>
             <p>
-            Praesent eget tortor sit risus egestas nulla pharetra ornare quis bibendum est bibendum sapien proin nascetur
+              Praesent eget tortor sit risus egestas nulla pharetra ornare quis bibendum est bibendum sapien proin nascetur
             </p>
             <div className="social-icons">
-              <a href="#" className="icon-link">
-                <i className="fa fa-facebook"><BsFacebook /></i>
-              </a>
-              <a href="#" className="icon-link">
-                <i className="fa fa-twitter"><AiFillTwitterCircle/></i>
-              </a>
-              <a href="#" className="icon-link">
-                <i className="fa fa-instagram"><AiFillInstagram/></i>
-              </a>
-              <a href="#" className="icon-link">
-                <i className="fa fa-linkedin"><AiFillLinkedin/></i>
-              </a>
+              <img style={{ height: '10rem' }} src={socialIcons} alt="" />
             </div>
           </div>
           <div className="footer-section links">
@@ -63,7 +49,7 @@ const Footer = () => {
                 className="text-input contact-input"
                 placeholder="Your message"
               ></textarea>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn">
                 Send
               </button>
             </form>
@@ -71,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Footland. All rights reserved.</p>
       </div>
     </footer>
   );
