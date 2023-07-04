@@ -2,17 +2,18 @@ import { IoIosMenu } from 'react-icons/io';
 import './Collection.css'
 import { useContext } from 'react';
 import { footContext } from '../Context';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Collection() {
     const data = useContext(footContext)
     const { men } = data;
+    const nav = useNavigate()
     return (
         <div>
             <div className="collection">
                 <div className='coll-box'>
                     <h1>Shop</h1>
-                    <button><IoIosMenu />FILTER SHOES</button>
+                    <button onClick={()=> nav('/filter')}><IoIosMenu />FILTER SHOES</button>
                 </div>
                 <div className='containder4'>
                     <div className='main2'>

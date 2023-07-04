@@ -45,5 +45,10 @@
   color: red;
   background-color: yellow;
   border-radius: 5rem;
+  
 
+}
+.user-name{
+  margin-left: 3rem;
+  color: yellow;
 }

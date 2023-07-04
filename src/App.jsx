@@ -21,6 +21,7 @@ import Users from './Components/Admin/Users';
 import AdminLogin from './Components/Admin/AdminLogin';
 import Lookbook from './Components/Lookbook';
 import EditProduct from './Components/Admin/EditProduct';
+import FilterPopUp from './Components/FilterPopUp';
 
 
 
@@ -30,12 +31,23 @@ function App() {
   const [password, setPassword] = useState([]);
   const [addProduct, setAddProduct] = useState([]);
   const [products, setProducts] = useState([]);
+  const [login, setLogin] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const getProductById = (id) => {
-    // Logic to retrieve the product by ID from the products array
+
     const product = products.find((product) => product.id === id);
     return product;
   };
-  const user = { password, setPassword, men, setMen, setCartItems, cartItems, addProduct, setAddProduct ,getProductById,setProducts}
+  const user = {
+    password, setPassword,
+    men, setMen, setCartItems,
+    cartItems,
+    addProduct, setAddProduct,
+    getProductById,
+    setProducts,
+    login, setLogin,
+    isOpen, setIsOpen
+  }
 
 
   return (
@@ -59,10 +71,11 @@ function App() {
               <Route path='/admin' Component={AdminPage} />
               <Route path='/products' Component={Products} />
               <Route path='/addproducts' Component={AddProducts} />
-              <Route path='/users' Component={Users}/>
-              <Route path='/adminlogin' Component={AdminLogin}/>
-              <Route path='/lookbook' Component={Lookbook}/>
-              <Route path='/editProduct/:id' Component={EditProduct}/>
+              <Route path='/users' Component={Users} />
+              <Route path='/adminlogin' Component={AdminLogin} />
+              <Route path='/lookbook' Component={Lookbook} />
+              <Route path='/editProduct/:id' Component={EditProduct} />
+              <Route path='/filter' Component={FilterPopUp} />
 
             </Routes>
             <Footer />

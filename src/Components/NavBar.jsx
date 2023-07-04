@@ -12,7 +12,15 @@ import Logo from '../assets/Logo.png'
 export default function NavBar() {
 
     const user = useContext(footContext);
-    const { cartItems } = user
+    const { cartItems, login, password,setLogin } = user
+    const [uName] = password
+
+    const logOut = () =>{
+        setLogin(false)
+
+    }
+    
+
 
 
 
@@ -37,17 +45,26 @@ export default function NavBar() {
 
                     <a href="" className='nav-link'></a>
                     <a href="" className='nav-link'>CONTACT</a>
-                    <Link to='/cart' className='nav-link'><GiShoppingBag /><Badge className="bg" >{cartItems.length}</Badge></Link>
+                    {login ? <Link to='/cart' className='nav-link'><GiShoppingBag /><Badge className="bg" >{cartItems.length}</Badge></Link>
+                        : <Link to='/register' className='nav-link'><GiShoppingBag /><Badge className="bg" >{cartItems.length}</Badge></Link>}
                     <Link to='/register' className='nav-link'><FaUserAlt /></Link>
-                    <Link to='/adminLogin' className='nav-link'>Admin Login</Link>
+                    <Link to='/adminLogin' className='nav-link'>Admin Login</Link><br />
+
                 </div>
+
             </nav>
+       
+             {
+                login ?
 
-
-
-
-
-
+                 <div className='user-name'>
+                    <h4>Welcome,{uName.Name}</h4>
+                    <button onClick={()=>logOut()}>Log out</button>
+                </div>
+                :
+                null
+            }
+           
         </div>
     );
 }

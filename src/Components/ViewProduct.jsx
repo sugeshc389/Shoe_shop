@@ -1,30 +1,38 @@
 import { useContext } from "react";
 import { footContext } from "../Context";
-import {  useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import './ViewProduct.css';
 
 
 export default function ViewProduct() {
   const { id } = useParams();
   const data = useContext(footContext);
-  const { men ,cartItems,setCartItems} = data;
+  const { men ,cartItems,setCartItems,login} = data;
   const filteredShoe = men.filter((item) => item.id === parseInt(id));
-  const item = filteredShoe[0];
+  const item = filteredShoe[0]
+  const nav = useNavigate();
  
   const updatedCartItems = [...cartItems];
-  // const nav = useNavigate()
+  
 
   const addToCart = (item) => {
+   
     
     const existingItem = updatedCartItems.find((cartItem) => cartItem.id === item.id);
-    if (existingItem) {
-      existingItem.quantity += 1;
-    } else {
-      updatedCartItems.push({ ...item, quantity: 1 });
+    if(login){
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        updatedCartItems.push({ ...item, quantity: 1 });
+      }
+      setCartItems(updatedCartItems);
+      console.warn('Updated:',cartItems);
+    }else{
+
+      nav('/register');
     }
-    setCartItems(updatedCartItems);
-    console.warn('Updated:',cartItems);
-    // nav('/cart')
+   
   };
 
   return (

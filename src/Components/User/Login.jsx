@@ -8,7 +8,7 @@ const Login = () => {
   const data = useContext(footContext)
   const nav = useNavigate()
   const inputRef = useRef()
-  const { password } = data
+  const { password, setLogin } = data
 
 
   const handleSubmit = (e) => {
@@ -17,8 +17,13 @@ const Login = () => {
     const Password = inputRef.current.password.value
     console.log(email, Password);
     const [newdata] = password
-    newdata.Email == email && newdata.Password == Password ? nav('/') : alert('User Not Found !!!');
 
+    if (newdata.Email == email && newdata.Password == Password) {
+      setLogin(true)
+      nav('/');
+    } else {
+      alert('User Not Found !!!');
+    }
 
   };
 
