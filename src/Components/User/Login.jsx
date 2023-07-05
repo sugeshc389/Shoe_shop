@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault()
     const email = inputRef.current.email.value
     const Password = inputRef.current.password.value
-    console.log(email, Password);
+    
     const [newdata] = password
 
     if (newdata.Email == email && newdata.Password == Password) {

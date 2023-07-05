@@ -6,10 +6,10 @@ export default function AddProducts() {
 
     const inputref = useRef(null)
     const data = useContext(footContext)
-    const { setMen,men } = data;
+    const { setMen, men } = data;
     const nav = useNavigate()
     useEffect(() => {
-        console.log(men);
+        
     }, [men])
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,7 +17,6 @@ export default function AddProducts() {
         const Category = inputref.current.Category.value
         const Gender = inputref.current.Gender.value
         const Price = inputref.current.Price.value
-        
         const id = Date.now()
         const Image = inputref.current.Image.value
         setMen([...men, { Title, Category, Gender, Price, id, Image }])
@@ -71,7 +70,7 @@ export default function AddProducts() {
                             required
                         />
                     </div>
-                    
+
                     <div className="form-group">
                         <label htmlFor="password">Image</label>
                         <input

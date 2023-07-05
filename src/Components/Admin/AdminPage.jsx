@@ -1,12 +1,10 @@
-import { useContext } from "react"
-import { footContext } from "../../Context"
+
 import './AdminPage.css'
 import { useNavigate } from "react-router-dom"
 
 export default function AdminPage() {
     const nav = useNavigate();
-    const data = useContext(footContext)
-    console.log(data);
+    
     return (
         <div>
 

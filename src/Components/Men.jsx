@@ -8,7 +8,8 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function Men() {
     const data = useContext(footContext);
     const { men } = data;
-    const filteredShoe = men.filter((item) => item.Gender === 'Male')
+    const filteredShoe = men.filter((item) => item.Gender == 'Male')
+    
     const nav = useNavigate()
     
     return (
@@ -25,10 +26,10 @@ export default function Men() {
 
                     <div className="main">
 
-                        {filteredShoe.map((item, index) => {
+                        {filteredShoe.map((item) => 
 
-                            return (
-                                <div key={index} className="shoe-box2">
+                        (
+                                <div key={item.id} className="shoe-box2">
                                     <img src={item.Image} />
                                     <div className="men-btn">
                                         <Link to={`/viewProduct/${item.id}`}><button>QUICK VIEW</button></Link>
@@ -37,7 +38,7 @@ export default function Men() {
                                     </div>
                                 </div>
                             )
-                        })}
+                        )}
                     </div>
                 </div>
 

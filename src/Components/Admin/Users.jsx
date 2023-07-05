@@ -5,7 +5,7 @@ import './Users.css'
 export default function Users() {
     const data = useContext(footContext)
     const { password } = data
-    console.log(password);
+    
     return (
         <>
             <h1 className="users">Users</h1>

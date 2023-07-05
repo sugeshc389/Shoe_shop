@@ -4,9 +4,9 @@ import './AddToCart.css';
 
 function AddToCart() {
   const data = useContext(footContext);
-  const { cartItems, setCartItems,login } = data;
+  const { cartItems, setCartItems} = data;
 
-  console.log(login);
+ 
 
   const removeItemFromCart = (itemId) => {
     const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
